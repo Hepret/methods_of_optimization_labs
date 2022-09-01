@@ -5,7 +5,7 @@ from answer import Answer
 
 def bisection_method(func: Callable[[float], float], a=-100, b=100, epsilon=0.0001) -> Answer:
     """
-    Метод деления пополам
+    Реализация метода деления пополам
     :param func: Callable[[float], float]
     :param a: float or int
     :param b: float or int
@@ -20,9 +20,7 @@ def bisection_method(func: Callable[[float], float], a=-100, b=100, epsilon=0.00
         u1 = (b + a - delta) / 2
         u2 = (b + a + delta) / 2
 
-        U1 = func(u1)
-        U2 = func(u2)
-        if U1 > U2:
+        if func(u1) > func(u2):
             a = u1
         else:
             b = u2
