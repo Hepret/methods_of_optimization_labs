@@ -12,18 +12,20 @@ def bisection_method(func: Callable[[float], float], a=-100, b=100, epsilon=0.00
     :param epsilon: real
     :return: Answer
     """
-    delta = epsilon
+    delta = epsilon / 2
 
     iterations = 0
 
-    while b - a < epsilon:
-        u1 = (b - a - delta) / 2
-        u2 = (b - a + delta) / 2
+    while b - a > epsilon:
+        u1 = (b + a - delta) / 2
+        u2 = (b + a + delta) / 2
 
-        if func(u1) > func(u2):
-            b = u2
-        else:
+        U1 = func(u1)
+        U2 = func(u2)
+        if U1 > U2:
             a = u1
+        else:
+            b = u2
 
         iterations += 1
 
