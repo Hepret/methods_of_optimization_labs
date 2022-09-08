@@ -1,7 +1,7 @@
 from math import pow, atan
 
-a = -0.9
-b = 2.5
+a = -1.1
+b = 2.0
 
 
 def function(u: float) -> float:

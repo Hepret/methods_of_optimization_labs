@@ -10,10 +10,9 @@ class Answer:
 
     def __str__(self):
 
-        return f'''Point of minimum: {self.point_of_minimum}
-Minimum value: {self.minimum_value}
-Total iterations: {self.iterations}
-Total function calls: {self.function_calls}
-Accuracy: {self.accuracy}
-Last localization segment length: {self.localization_segment_length}
-        '''
+        return f'''u* = {self.point_of_minimum}
+J* = {self.minimum_value}
+Количество итераций: {self.iterations}
+Количество вызовов функции: {self.function_calls}
+Точность вычислений: {self.accuracy}
+Длина последнего отрезка локализации точки минимума: {self.localization_segment_length}'''
