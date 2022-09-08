@@ -31,5 +31,6 @@ def bisection_method(func: Callable[[float], float], a=-100, b=100, epsilon=0.00
     minimum_value = func(minimum_point)
     func_calls = iterations * 2 + 1
     localization_segment_length = b - a
+    accuracy = (b - a) / (2 ** iterations)
 
-    return Answer(minimum_point, minimum_value, iterations, epsilon, func_calls, localization_segment_length)
+    return Answer(minimum_point, minimum_value, iterations, accuracy, func_calls, localization_segment_length)
