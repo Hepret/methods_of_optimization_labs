@@ -13,6 +13,6 @@ class Answer:
         return f'''u* = {self.point_of_minimum}
 J* = {self.minimum_value}
 Количество итераций: {self.iterations}
-Количество вызовов функции: {self.function_calls}
-Точность вычислений: {self.accuracy}
-Длина последнего отрезка локализации точки минимума: {self.localization_segment_length}'''
+Количество вызовов функции: { self.function_calls}
+Точность вычислений: {"{:.20f}".format(self.accuracy)}
+Длина последнего отрезка локализации точки минимума: {"{:.20f}".format(self.localization_segment_length)}'''
