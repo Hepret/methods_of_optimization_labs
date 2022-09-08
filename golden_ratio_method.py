@@ -68,7 +68,7 @@ def golden_ratio_method(func: Callable[[float], float], a=-100, b=100, epsilon=0
     minimum_point = (b + a) / 2
     minimum_value = func(minimum_point)
     localization_segment_length = b - a
-    accuracy = (b - a) / (2 ** iterations)
+    accuracy = (3-sqrt(5)) * (b - a) / (2 ** iterations)
     return Answer(minimum_point, minimum_value, iterations, accuracy, func_calls, localization_segment_length)
 
 
